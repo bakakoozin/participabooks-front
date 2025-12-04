@@ -17,6 +17,8 @@ COPY . .
 # Build application
 RUN pnpm run build
 
+FROM socialengine/nginx-spa:latest
+
 # Copy built files to nginx
 COPY --from=builder /app/dist /app/
 COPY --from=builder /app/public /app/public
