@@ -1,9 +1,9 @@
 # Build stage
-FROM node:24-slim AS builder
+FROM node:22-slim AS builder
 
 WORKDIR /app
 
-RUN corepack enable
+RUN corepack enable && corepack prepare pnpm@latest --activate
 
 # Copy package files
 COPY package.json pnpm-lock.yaml ./
