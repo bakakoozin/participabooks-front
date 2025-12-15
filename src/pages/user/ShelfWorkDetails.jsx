@@ -65,8 +65,7 @@ export function ShelfWorkDetails() {
     if (data.datas.length > 0) {
       const mapped = data.datas.map((volume) => ({
         ...volume,
-        user_status: volume.vol_status_user ?? null,
-        volume_status: volume.vol_status,
+        status: volume.vol_status_user ?? null,
       }));
       setVolumes(mapped);
     }
@@ -112,7 +111,7 @@ export function ShelfWorkDetails() {
                       type="radio"
                       name={`status-${volume.vol_id}`}
                       value="lu"
-                      checked={volume.user_status === "lu"}
+                      checked={volume.status === "lu"}
                       onChange={() => handleStatusToggle(volume.vol_id, "lu")}
                     />
                     Lu
@@ -120,7 +119,7 @@ export function ShelfWorkDetails() {
 
                   <label
                     className={
-                      volume.user_status === "à lire" ? styles.selected : ""
+                      volume.status === "à lire" ? styles.selected : ""
                     }
                   >
                     <input
