@@ -6,8 +6,6 @@ export default ({ mode }) => {
   // charge .env, .env.production, etc + process.env
   const env = loadEnv(mode, process.cwd(), "VITE_");
 
-  console.log("VITE_API_URL:", env.VITE_API_URL);
-
   return defineConfig({
     plugins: [react()],
     define: {
