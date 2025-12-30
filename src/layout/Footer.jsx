@@ -21,7 +21,7 @@ export function Footer() {
           to="cgu"
           end
           className={({ isActive }) =>
-            `${styles.navLink} ${isActive ? styles.active : ""}`
+            `${styles.navLinks} ${isActive ? styles.active : ""}`
           }
         >
           CGU
@@ -30,7 +30,7 @@ export function Footer() {
           to="legal"
           end
           className={({ isActive }) =>
-            `${styles.navLink} ${isActive ? styles.active : ""}`
+            `${styles.navLinks} ${isActive ? styles.active : ""}`
           }
         >
           Mentions Légales
