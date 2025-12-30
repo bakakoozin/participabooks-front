@@ -25,7 +25,7 @@ function App() {
   }
 
   return (
-    <main className="App">
+    <main>
       <Header />
       {isMenuOpen && (
         <div
