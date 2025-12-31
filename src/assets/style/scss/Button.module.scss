@@ -16,6 +16,7 @@
     color: var(--active-menu-text);
   }
 }
+// en tailwind : py-4 px-8 bg-(--button-bg) text-(--secondary-text-color) border-none rounded-sm shadow-(--button-shadow) cursor-pointer transition-colors duration-300 hover:bg-(--button-hover-bg) hover:text-(--active-menu-text)
 
 .btnAlert {
   padding: 1rem 2rem;
@@ -75,23 +76,24 @@
 
 //BOUTON RETOUR
 
-.returnBtn {
-  padding: 1rem 2rem;
-  background-color: var(--light-color);
-  color: var(--secondary-text-color);
-  height: 4rem;
-  border: none;
-  border-radius: $border-radius;
-  box-shadow: var(--button-shadow);
-  cursor: pointer;
-  transition: background-color 0.3s;
-  &:focus,
-  &:active {
-    outline: none;
-    background-color: var(--light-color); // même que le fond normal
-    color: var(--secondary-text-color);   // idem
-  }
-}
+// .returnBtn {
+//   padding: 1rem 2rem;
+//   background-color: var(--light-color);
+//   color: var(--secondary-text-color);
+//   height: 4rem;
+//   border: none;
+//   border-radius: $border-radius;
+//   box-shadow: var(--button-shadow);
+//   cursor: pointer;
+//   transition: background-color 0.3s;
+//   &:focus,
+//   &:active {
+//     outline: none;
+//     background-color: var(--light-color); // même que le fond normal
+//     color: var(--secondary-text-color);   // idem
+//   }
+// }
+// en tailwind : py-2 px-6 bg-(--light-color) text-(--secondary-text-color) border-none rounded-md shadow-(--button-shadow) cursor-pointer transition-colors duration-300 focus:outline-none active:outline-none focus:bg-(--light-color) focus:text-(--secondary-text-color) active:bg-(--light-color) active:text-(--secondary-text-color) hover:bg-(--button-hover-bg) hover:text-(--active-menu-text)
 
 // MODALE SUPPRESSION
 
