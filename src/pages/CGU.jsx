@@ -1,17 +1,19 @@
 import { useTitle } from "../hooks/useTitle";
 
 import { useMetaDescription } from "../hooks/useMetaDescription";
-import styles from "../assets/style/scss/Pages.module.scss";
+// import styles from "../assets/style/scss/Pages.module.scss";
 
 export function CGU() {
   useTitle("CGU");
   useMetaDescription("Conditions générales d'utilisation de Participabooks. Règles d'usage du service et droits des utilisateurs.");
 
   return (
-    <main className={styles.mainContainer}>
-      <h2>Conditions Générales d’Utilisation</h2>
+    <main className="transition-colors duration-300
+      md:pt-36 md:m-auto md:w-4/5
+      lg:pt-44 lg:pb-12 lg:w-3/5">
+      <h2 className="text-center bg-(--brown-color) text-(--secondary-text-color) p-4 rounded-md shadow-(--card-shadow) mb-8">Conditions Générales d’Utilisation</h2>
 
-      <section className={styles.card}>
+      <section className="flex flex-col gap-6 bg-(--green-color) rounded-lg py-4 px-8 shadow-(--card-shadow)">
         <article>
           <h3>1. Objet</h3>
           <p>

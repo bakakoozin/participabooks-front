@@ -26,7 +26,7 @@ export function Footer() {
         <NavLink
           to="cgu"
           end
-          className={({ isActive }) => `transition-colors
+          className={({ isActive }) => `transition-colors duration-300
        ${
          isActive
            ? "text-(--dark-text-color)"
@@ -38,7 +38,7 @@ export function Footer() {
         <NavLink
           to="legal"
           end
-          className={({ isActive }) => `transition-colors
+          className={({ isActive }) => `transition-colors duration-300
        ${
          isActive
            ? "text-(--dark-text-color)"
