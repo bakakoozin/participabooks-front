@@ -10,15 +10,16 @@ export function Footer() {
 
   return (
     <footer
-      className="fixed bottom-0 left-0 w-full h-10 p-2.5 text-center bg-(--green-color) border-t border-(--layout-border-color) shadow-[0_-4px_4px_var(--layout-border-color)]
-      md:static md:flex md:justify-between md:items-center md:h-12.5"
+      className="fixed bottom-0 left-0 w-full h-10 pb-2.5 text-center bg-(--green-color) border-t border-(--layout-border-color) shadow-[0_-4px_4px_var(--layout-border-color)]
+      md:static md:flex md:justify-between md:items-center md:h-12.5
+      lg:pb-0"
     >
       {!isHome && (
         <div className="hidden md:flex">
           <ButtonReturn />
         </div>
       )}
-      <p className="text-(--secondary-text-color)">&copy; 2025 - Baka Dev - Participabooks</p>
+      <p className="text-(--secondary-text-color) p-1.5">&copy; 2025 - Baka Dev - Participabooks</p>
       <nav
         aria-label="Liens légaux"
         className="hidden text-(--admin-text-color) md:flex md:mr-4 gap-4"
