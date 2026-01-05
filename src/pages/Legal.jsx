@@ -2,36 +2,41 @@
 import { useTitle } from "../hooks/useTitle";
 
 import { useMetaDescription } from "../hooks/useMetaDescription";
-import styles from "../assets/style/scss/Pages.module.scss";
+// import styles from "../assets/style/scss/Pages.module.scss";
 
 export function Legal() {
   useTitle("Mentions Légales");
   useMetaDescription("Mentions légales de Participabooks. Informations légales et éditeur du site.");
 
   return (
-    <main className={styles.mainContainer}>
-      <h2>Mentions Légales</h2>
+    <main className="transition-colors duration-300 pt-28 pb-12 px-4
+      md:pt-36 md:m-auto md:w-4/5
+      lg:pt-44 lg:pb-12 lg:w-3/5">
+      <h2 className="text-center text-2xl bg-(--brown-color) text-(--secondary-text-color) p-2 rounded-md shadow-(--card-shadow) mb-4">
+        Mentions Légales</h2>
 
-      <section className={styles.card}>
+      <section className="flex flex-col gap-6 text-(--brown-color) bg-(--green-color) rounded-md py-4 px-8 shadow-(--card-shadow) mb-2.5
+      md:py-8 md:px-12 md:gap-4">
         <article>
-          <h3>Éditeur du site</h3>
+          <h3 className="text-(--brown-color) text-lg py-2">Éditeur du site</h3>
           <p>Cyril PEBRE - bakadev</p>
-          <a
+          <a 
             href="https://linktr.ee/bakadev"
             target="_blank"
             rel="lien vers formulaire de contact"
+            className="text-(--admin-text-color) font-bold hover:text-(--dark-text-color) hover:border hover:border-(--layout-border-color) hover:px-2 hover:rounded-sm"
           >
             Nous contacter
           </a>
         </article>
 
         <article>
-          <h3>Hébergement</h3>
-          <p>Hébergeur : IDE de la 3WAccademy</p>
+          <h3 className="text-(--brown-color) text-lg py-2">Hébergement</h3>
+          <p>Hébergeur : IONOS</p>
         </article>
 
         <article>
-          <h3>Responsabilité</h3>
+          <h3 className="text-(--brown-color) text-lg py-2">Responsabilité</h3>
           <p>
             ParticipaBooks décline toute responsabilité quant à l’usage qui
             pourrait être fait des contenus du site. Les utilisateurs restent
@@ -40,7 +45,7 @@ export function Legal() {
         </article>
 
         <article>
-          <h3>Propriété intellectuelle</h3>
+          <h3 className="text-(--brown-color) text-lg py-2">Propriété intellectuelle</h3>
           <p>
             Tous les éléments du site ParticipaBooks (textes, images, logo, code
             source) sont protégés par le droit d’auteur. Toute reproduction non
@@ -49,7 +54,7 @@ export function Legal() {
         </article>
 
         <article>
-          <h3>Données personnelles</h3>
+          <h3 className="text-(--brown-color) text-lg py-2">Données personnelles</h3>
           <p>
             Conformément au RGPD, vous disposez d’un droit d’accès, de
             rectification et de suppression de vos données. Pour toute demande,
@@ -58,6 +63,7 @@ export function Legal() {
               href="https://linktr.ee/bakadev"
               target="_blank"
               rel="lien vers formulaire de contact"
+              className="text-(--admin-text-color) font-bold hover:text-(--dark-text-color) hover:border hover:border-(--layout-border-color) hover:px-2 hover:rounded-sm"
             >
               Nous contacter
             </a>
