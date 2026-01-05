@@ -4,7 +4,7 @@ import PropTypes from "prop-types";
 
 import { API_URL } from "../../utils/constants";
 
-import styles from "../../assets/style/scss/Button.module.scss";
+// import styles from "../../assets/style/scss/Button.module.scss";
 
 const ButtonAddToShelf = ({ item, type, ariaLabel }) => {
   const { isLogged, infos } = useSelector((state) => state.auth);
@@ -43,7 +43,8 @@ const ButtonAddToShelf = ({ item, type, ariaLabel }) => {
   return (
     <button
       onClick={handleAddToShelf}
-      className={styles.btn}
+      className="py-4 px-8 bg-(--button-bg) text-(--secondary-text-color) border-none rounded-md shadow-(--button-shadow) cursor-pointer transition-colors duration-300 hover:bg-(--button-hover-bg) hover:text-(--active-menu-text)
+      lg:text-lg"
       aria-label={ariaLabel}
     >
       Ajouter à ma bibliothèque
