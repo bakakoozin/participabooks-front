@@ -55,23 +55,23 @@
   display: flex;
   justify-content: flex-end;
 
-  .btnReadMore {
-    text-align: right;
-    padding: 0.5rem 2rem;
-    margin-top: 1rem;
-    background-color: var(--brown-color);
-    color: var(--secondary-text-color);
-    border: none;
-    border-radius: $border-radius;
-    box-shadow: var(--button-shadow);
-    cursor: pointer;
-    transition: background-color 0.3s;
+  // .btnReadMore {
+  //   text-align: right;
+  //   padding: 0.5rem 2rem;
+  //   margin-top: 1rem;
+  //   background-color: var(--brown-color);
+  //   color: var(--secondary-text-color);
+  //   border: none;
+  //   border-radius: $border-radius;
+  //   box-shadow: var(--button-shadow);
+  //   cursor: pointer;
+  //   transition: background-color 0.3s;
 
-    &:hover {
-      background-color: var(--button-hover-bg);
-      color: var(--active-menu-text);
-    }
-  }
+  //   &:hover {
+  //     background-color: var(--button-hover-bg);
+  //     color: var(--active-menu-text);
+  //   }
+  // }
 }
 
 //BOUTON RETOUR
