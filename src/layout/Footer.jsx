@@ -11,8 +11,7 @@ export function Footer() {
   return (
     <footer
       className="fixed bottom-0 left-0 w-full h-10 pb-2.5 text-center bg-(--green-color) border-t border-(--layout-border-color) shadow-[0_-4px_4px_var(--layout-border-color)]
-      md:static md:flex md:justify-between md:items-center md:h-12.5
-      lg:pb-0"
+      md:static md:flex md:justify-between md:items-center md:h-12.5 md:pb-0"
     >
       {!isHome && (
         <div className="hidden md:flex">
