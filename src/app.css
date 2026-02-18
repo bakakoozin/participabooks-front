@@ -22,6 +22,7 @@
   --button-hover-bg: rgba(0, 0, 0, 0.8);
 
   --brown-color: #593f42;
+  --brown-color-transparent: rgba(89, 63, 66, 0,95);
   --red-color: #c0392b;
 
   --dark-text-color: #593f42;
@@ -52,6 +53,7 @@
     --button-bg: #8b4a3c;
     --red-color: #7f2318;
     --brown-color: #1e1e1e;
+    --brown-color-transparent: rgba(30, 30, 30, 0.95)
 
     --dark-text-color: #e0e0e0;
     --secondary-text-color: #a6a6a6;
