@@ -7,10 +7,10 @@
 
   h1 {
     text-align: center;
-    background-color: var(--brown-color);
-    color: var(--secondary-text-color);
+    background-color: transparent;
+    color: var(--dark-text-color);
     padding: 1rem;
-    border-radius: $border-radius;
+    border-radius: 1px;
     box-shadow: var(--card-shadow);
   }
 

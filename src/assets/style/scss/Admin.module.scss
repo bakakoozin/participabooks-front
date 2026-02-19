@@ -3,7 +3,9 @@
 
 .mainContainer {
   padding-top: var(--header-height);
-  transition: border-color 0.3s, box-shadow 0.3s;
+  transition:
+    border-color 0.3s,
+    box-shadow 0.3s;
 
   h2 {
     background-color: var(--green-color);
