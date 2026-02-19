@@ -41,7 +41,7 @@ a {
 
 .container {
   max-width: 1440px;
-  min-height: 94.3vh;
+ height: 100vh;
   margin: 0 auto;
   padding: 0 1.5rem;
   padding-bottom: 2rem;
@@ -68,7 +68,7 @@ button {
   @include respond-to(desktop) {
     --header-height: 8rem;
     .container {
-      min-height: 93.7vh;
+      min-height: 100vh;
     }
   }
 }

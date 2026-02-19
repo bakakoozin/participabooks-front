@@ -2,16 +2,18 @@
 @import "variables";
 
 .mainContainer {
-  padding-top: var(--header-height);
+  padding-top: 8vh;
+  padding-bottom: 5vh;
   transition: background-color 0.3s;
 
   h1 {
     text-align: center;
-    background-color: transparent;
+    background-color: var(--elements-bg-color);
     color: var(--dark-text-color);
     padding: 1rem;
     border-radius: 1px;
-    box-shadow: var(--card-shadow);
+    border: solid 1px var(--layout-bg-color);
+    opacity: 0.6;
   }
 
   .headerLibrary {
@@ -26,75 +28,37 @@
       align-items: center;
 
       input {
-        width: 50lvw;
+        width: 60vw;
+        height: 5vh;
         padding: $gap-sm;
-        border-radius: $border-radius;
-        border: none;
-        box-shadow: var(--search-shadow);
-        font-size: $font-lg;
+        border-radius: 1px;
+        border: solid 1px var(--elements-bg-color);
+        font-size: $font-sm;
         color: var(--brown-color);
         text-align: center;
-        background-color: var(--secondary-text-color);
+        background-color: var(--search-bg-color);
 
         &:focus {
           outline: none;
-          box-shadow: var(--form-shadow-focus);
+          box-shadow: var(--search-shadow-focus);
         }
       }
     }
     .navButton {
       display: none;
-      justify-content: center;
-      align-items: center;
-      $nav-button-size: 30px;
-      position: absolute;
-      top: 60%;
-      transform: translateY(-50%);
-      background: var(--button-bg);
-      color: var(--secondary-text-color);
-      border: none;
-      width: $nav-button-size + 10;
-      height: $nav-button-size + 10;
-      cursor: pointer;
-      font-size: $nav-button-size;
-      z-index: 10;
-      border-radius: 50%;
-      transition: background 0.3s ease;
-
-      &.left {
-        left: 2rem;
-      }
-
-      &.right {
-        right: 2rem;
-      }
-
-      &:hover {
-        background: var(--button-hover-bg);
-      }
     }
   }
 
-  .sliderContainer {
-    overflow: hidden;
-    padding: 1.5rem 0;
+  .workContainer {
+    padding: 1.5rem 1.2rem 2rem 1.2rem;
 
-    .slider {
-      display: flex;
+    .work {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(1, 1fr));
       gap: 2rem;
-      padding: 0 1.2rem 2rem 1.2rem;
-      overflow-x: auto;
-      scroll-behavior: smooth;
-      scrollbar-width: none;
-      -ms-overflow-style: none;
-
-      &::-webkit-scrollbar {
-        display: none;
-      }
     }
 
     .workCard {
-      flex: 0 0 100%;
       background: var(--green-color);
       padding: 1.5rem;
       border-radius: $card-radius;
@@ -160,8 +124,8 @@
 
 @include respond-to(tablet) {
   .mainContainer {
-    padding-top: 8rem;
-    padding-bottom: 1rem;;
+    padding-top: 10vh;
+    padding-bottom: 4vh;
 
     .searchBar {
       input {
@@ -174,16 +138,14 @@
         flex-direction: column;
       }
     }
-    .sliderContainer {
-      .slider {
+    .workContainer {
+      .work {
+        grid-template-columns: repeat(2, 1fr);
         gap: 1rem;
         padding: 0 1.2rem 2rem 1.2rem;
       }
 
       .workCard {
-        flex: 0 0 50%;
-        max-width: 50%;
-
         img {
           width: 95%;
         }
@@ -194,7 +156,6 @@
 
 @include respond-to(desktop) {
   .mainContainer {
-    padding-top: 10rem;
     h1 {
       font-size: 2.5rem;
       padding: 1rem;
@@ -204,25 +165,20 @@
       .searchBar {
         input {
           width: 20vw;
+          height: 3vh;
         }
-      }
-
-      .navButton {
-        display: flex;
       }
     }
 
-    .sliderContainer {
-      overflow: hidden;
-      padding: 1.5rem 0;
+    .workContainer {
+      padding: 1.5rem 1.2rem 2rem 1.2rem;
 
-      .slider {
-        display: flex;
+      .work {
+        grid-template-columns: repeat(5, 1fr);
         gap: 1.8rem;
       }
 
       .workCard {
-        flex: 0 0 19%;
         padding: 1rem;
       }
     }
