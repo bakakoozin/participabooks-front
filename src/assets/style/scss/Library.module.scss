@@ -9,11 +9,10 @@
   h1 {
     text-align: center;
     background-color: var(--elements-bg-color);
-    color: var(--dark-text-color);
+    color: var(--brown-color);
     padding: 1rem;
-    border-radius: 1px;
+    border-radius: $card-radius;
     border: solid 1px var(--layout-bg-color);
-    opacity: 0.6;
   }
 
   .headerLibrary {
@@ -59,10 +58,11 @@
     }
 
     .workCard {
-      background: var(--green-color);
+      background: var(--elements-bg-color);
       padding: 1.5rem;
       border-radius: $card-radius;
-      box-shadow: var(--card-shadow);
+      border: 1px solid var(--elements-bg-color);
+      // box-shadow: var(--card-shadow);
       color: var(--brown-color);
       text-align: center;
 
@@ -71,7 +71,10 @@
       }
 
       &:hover {
-        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+        // box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+        box-shadow: var(--card-shadow);
+        // border: 1px solid var(--elements-bg-color);
+        // border-bottom: 1px solid var(--elements-bg-color);
       }
     }
   }

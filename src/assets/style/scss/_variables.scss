@@ -26,15 +26,16 @@ $dark-button-hover-bg: rgba(255, 255, 255, 0.2);
 $dark-card-shadow: 0 3px 5px rgba(0, 0, 0, 0.8);
 $dark-button-shadow: 1px 1px 3px rgba(255, 255, 255, 0.2);
 
-$font-family: "Candara";
-$font-family-alt: "Atkinson Hyperlegible", sans-serif;
+$font-family: "Candara"; //used
+$font-family-alt: "Atkinson Hyperlegible", sans-serif; //used
 $button-font-family: $font-family-alt;
-$font-weight: 400;
-$font-weight-md: 500;
-$font-weight-bold: 600;
+$font-weight: 400; //used
+$font-weight-md: 500; //used
+$font-weight-bold: 600; //used
 $font-size: 1.6rem;
 $border-radius: 5px;
-$card-radius: 1px;
+$button-radius: 2px;
+$card-radius: 1px; //used
 
 $font-lg: $font-size * 1.5;
 $font-sm: 1.4rem;
@@ -48,24 +49,27 @@ $gap-xl: $gap * 4;
 // Variables CSS dynamiques
 :root {
   --light-color: #bf705e;
-  --orange-color: #f29966;
+  --orange-color: #f29966; //used
   --bg-color: #4b5e5b;
-  --layout-bg-color: rgba(75, 94, 91, 0.75);
-  --elements-bg-color: rgba(75, 94, 91, 0.4);
+  --layout-bg-color: rgba(75, 94, 91, 0.85); //used
+  --elements-bg-color: rgba(75, 94, 91, 0.4); //used
+  --hover-pagination-color: rgba(92, 95, 95, 0.1); //used
   --button-bg: #bf705e;
-  --brown-color: #593f42;
-  --red-color: #c56c62;
-  --dark-text-color: #050505;
-  --secondary-text-color: #f4f4f4;
-  --search-bg-color: rgba(244, 244, 244, 0.5);
-  --layout-border-color: #2b3634;
+  --brown-color: #593f42; //used
+  --red-color: #F24C3D; //used
+  --dark-text-color: rgba(42, 39, 39, 0.8); //used
+  --dark-text-color-footer: rgb(30, 29, 29); //used
+  --dark-text-color-active:rgba(42, 39, 39, 0.5); //used
+  --secondary-text-color: #f4f4f4; //used
+  --search-bg-color: rgba(244, 244, 244, 0.5); //used
+  --layout-border-color: #2b3634; //used
   --active-menu-text:#bdbf73;
   --admin-text-color: #f4f4f4;
   --button-hover-bg: rgba(0, 0, 0, 0.8);
   --card-shadow: 0 3px 5px rgba(0, 0, 0, 0.5);
   --button-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
   --form-shadow: inset 1px 1px 7px rgba(0, 0, 0, 0.5);
-  --search-shadow-focus: inset 1px 1px 7px #2b3634;
+  --search-shadow-focus: inset 1px 1px 7px #2b3634; //used
   --form-shadow-focus: inset 1px 1px 7px #f29966;
   --avatar-shadow: 1px 1px 10px #593f42;
 }

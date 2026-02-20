@@ -63,8 +63,8 @@ export function Shelf() {
       </header>
       <Pagination totalPages={data.totalPages} />
 
-      <section className={styles.sliderContainer}>
-        <article className={styles.slider} ref={sliderRef}>
+      <section className={styles.workContainer}>
+        <article className={styles.work} ref={sliderRef}>
           {updatedData?.map((work) => (
             <section key={work.works_id} className={styles.workCard}>
               <header>

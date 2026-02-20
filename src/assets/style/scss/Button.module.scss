@@ -2,19 +2,19 @@
 @import "variables";
 
 .btn {
-  padding: 1rem 2rem;
-  background-color: var(--button-bg);
+  // padding: 1rem 2rem;
+  // background-color: var(--button-bg);
   color: var(--secondary-text-color);
   border: none;
-  border-radius: $border-radius;
-  box-shadow: var(--button-shadow);
+  // border-radius: $border-radius;
+  // box-shadow: var(--button-shadow);
   cursor: pointer;
   transition: background-color 0.3s;
 
-  &:hover {
-    background-color: var(--button-hover-bg);
-    color: var(--active-menu-text);
-  }
+  // &:hover {
+  //   // background-color: var(--button-hover-bg);
+  //   color: var(--active-menu-text);
+  // }
 }
 
 .btnAlert {
@@ -76,21 +76,14 @@
 //BOUTON RETOUR
 
 .returnBtn {
-  padding: 1rem 2rem;
-  background-color: var(--light-color);
+  width: 6vw;
+  height: 4vh;
+  padding: 0.5rem 1rem;
+  background-color: transparent;
   color: var(--secondary-text-color);
-  height: 4rem;
-  border: none;
-  border-radius: $border-radius;
-  box-shadow: var(--button-shadow);
+  border: 1px solid transparent;
   cursor: pointer;
-  transition: background-color 0.3s;
-  &:focus,
-  &:active {
-    outline: none;
-    background-color: var(--light-color); // même que le fond normal
-    color: var(--secondary-text-color);   // idem
-  }
+  transition: color 0.3s;
 }
 
 // MODALE SUPPRESSION
@@ -186,5 +179,18 @@
   .btnEdit {
     font-size: 1.3rem;
     padding: 0.5rem 1rem;
+  }
+}
+
+//MODE DESKTOP @media (min-width: 1024px)
+
+@include respond-to(desktop) {
+  .returnBtn {
+    &:hover {
+      font-size: 1.5rem;
+      border-left: 1px solid var(--dark-text-color);
+      border-right: 1px solid var(--dark-text-color);
+      color: var(--dark-text-color);
+    }
   }
 }
