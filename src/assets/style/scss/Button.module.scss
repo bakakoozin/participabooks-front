@@ -3,9 +3,7 @@
 
 .btnAdd {
   border: none;
-  height: 5rem;
-  width: 14rem;
-  padding: 0 2rem;
+  padding: 1rem 2rem;
   font-size: $font-sm;
   background-color: var(--btnAdd-bg);
   color: var(--secondary-text-color);
@@ -196,14 +194,16 @@
 
   .btnAdd {
     cursor: pointer;
+    font-size: 1.4rem;
+    background-color: transparent;
+    color: var(--dark-text-color);
     transition:
       opacity 0.3s,
       background-color 0.3s;
 
     &:hover {
-      background-color: transparent;
-      font-size: $font-hover;
-      color: var(--dark-text-color);
+      background-color: var(--btnAdd-bg);
+      color: var(--secondary-text-color);
     }
   }
 }

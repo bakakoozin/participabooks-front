@@ -92,7 +92,9 @@ export function Home() {
                 </figure>
                 <footer className={styles.workFooter}>
                   <aside className={styles.authorsList}>
-                    <p>Editions {work.works_edition}</p>
+                    <p className={styles.editions}>
+                      Editions {work.works_edition}
+                    </p>
                     <AuthorsList workAuthors={work.authors_name} />
                   </aside>
                   <aside className={styles.buttons}>
@@ -132,6 +134,9 @@ export function Home() {
           )}
         </div>
       </section>
+      <div className={styles.paginationBottom}>
+        <Pagination totalPages={data.totalPages} />
+      </div>
     </main>
   );
 }

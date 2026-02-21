@@ -81,7 +81,6 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    padding: 1rem 0;
   }
 
   .workFooter {
@@ -90,16 +89,23 @@
     align-items: center;
     gap: $gap-md;
     padding-top: 1rem;
+
     .authorsList {
       font-size: 1.4rem;
+      width: 50%;
+
+      .editions {
+        border-bottom: 2px solid var(--bg-color);
+        padding-bottom: 1rem;
+        margin-bottom: 1rem;
+      }
     }
 
     .buttons {
       display: flex;
-      // justify-content: flex-end;
       flex-direction: column;
       gap: $gap-lg;
-      font-weight: 400;
+      width: 50%;
 
       .btnEdit {
         padding: 1rem 2rem;
@@ -201,5 +207,9 @@
         }
       }
     }
+  }
+
+  .paginationBottom {
+    display: none;
   }
 }
