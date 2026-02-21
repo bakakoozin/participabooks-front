@@ -43,7 +43,7 @@ const ButtonAddToShelf = ({ item, type, ariaLabel }) => {
   return (
     <button
       onClick={handleAddToShelf}
-      className={styles.btn}
+      className={styles.btnAdd}
       aria-label={ariaLabel}
     >
       Ajouter à ma bibliothèque

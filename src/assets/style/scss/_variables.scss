@@ -33,8 +33,10 @@ $font-weight: 400; //used
 $font-weight-md: 500; //used
 $font-weight-bold: 600; //used
 $font-size: 1.6rem;
+$font-hover: 1.5rem;
 $border-radius: 5px;
 $button-radius: 2px;
+$search-radius: 2px; //used
 $card-radius: 1px; //used
 
 $font-lg: $font-size * 1.5;
@@ -48,6 +50,8 @@ $gap-xl: $gap * 4;
 
 // Variables CSS dynamiques
 :root {
+  --test-color: #a7b8a7;
+  --btnAdd-bg: rgba(96, 131, 94, 0.6);
   --light-color: #bf705e;
   --orange-color: #f29966; //used
   --bg-color: #4b5e5b;

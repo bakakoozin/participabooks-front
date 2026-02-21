@@ -55,7 +55,7 @@ export function Home() {
 
   return (
     <main className={styles.mainContainer}>
-      <h1>Bibliothèque</h1>
+      {/* <h1>Bibliothèque</h1> */}
       <header className={styles.headerLibrary}>
         <form className={styles.searchBar}>
           <input
@@ -92,10 +92,10 @@ export function Home() {
                 </figure>
                 <footer className={styles.workFooter}>
                   <aside className={styles.authorsList}>
+                    <p>Editions {work.works_edition}</p>
                     <AuthorsList workAuthors={work.authors_name} />
                   </aside>
                   <aside className={styles.buttons}>
-                    <p>Editions {work.works_edition}</p>
                     <ButtonAddToShelf
                       item={work}
                       type="work"

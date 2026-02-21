@@ -84,10 +84,10 @@ export function Shelf() {
               </figure>
               <footer className={styles.workFooter}>
                 <aside className={styles.authorsList}>
+                  <p>{work.works_edition}</p>
                   <AuthorsList workAuthors={work.authors_name} />
                 </aside>
                 <aside className={styles.buttons}>
-                  <p>{work.works_edition}</p>
                   <ButtonRemoveFromShelf
                     item={work}
                     type="work"

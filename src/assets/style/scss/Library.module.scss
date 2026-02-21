@@ -30,7 +30,7 @@
         width: 60vw;
         height: 5vh;
         padding: $gap-sm;
-        border-radius: 1px;
+        border-radius: $search-radius;
         border: solid 1px var(--elements-bg-color);
         font-size: $font-sm;
         color: var(--brown-color);
@@ -62,19 +62,12 @@
       padding: 1.5rem;
       border-radius: $card-radius;
       border: 1px solid var(--elements-bg-color);
-      // box-shadow: var(--card-shadow);
+      box-shadow: var(--card-shadow);
       color: var(--brown-color);
       text-align: center;
 
       img {
         width: 95%;
-      }
-
-      &:hover {
-        // box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-        box-shadow: var(--card-shadow);
-        // border: 1px solid var(--elements-bg-color);
-        // border-bottom: 1px solid var(--elements-bg-color);
       }
     }
   }
@@ -93,7 +86,7 @@
 
   .workFooter {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
     gap: $gap-md;
     padding-top: 1rem;
@@ -103,6 +96,7 @@
 
     .buttons {
       display: flex;
+      // justify-content: flex-end;
       flex-direction: column;
       gap: $gap-lg;
       font-weight: 400;
@@ -183,6 +177,10 @@
 
       .workCard {
         padding: 1rem;
+        box-shadow: none;
+        &:hover {
+          box-shadow: var(--card-shadow);
+        }
       }
     }
     .workFooter {
