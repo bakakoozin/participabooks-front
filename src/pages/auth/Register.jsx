@@ -129,7 +129,7 @@ export function Register() {
             </p>
           )}
           <button className={styles.btn} type="submit">
-            Créer compte
+            Valider
           </button>
           {message && <p className={styles.authAlert}>{message}</p>}
         </form>

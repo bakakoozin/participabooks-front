@@ -12,6 +12,7 @@
     padding: 1rem;
     border-radius: $card-radius;
     border: solid 1px var(--layout-bg-color);
+    box-shadow: $card-shadow;
     margin-bottom: 2rem;
   }
 
@@ -111,13 +112,12 @@
       }
 
       .btn {
-        background-color: transparent;
-        color: var(--dark-text-color);
+        color: var(--secondary-text-color);
         cursor: pointer;
 
         &:hover {
-          background-color: var(--btnAdd-bg);
-          color: var(--secondary-text-color);
+          background-color: transparent;
+          color: var(--dark-text-color);
         }
       }
     }

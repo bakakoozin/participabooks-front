@@ -13,6 +13,7 @@
     padding: 1rem;
     border-radius: $card-radius;
     border: solid 1px var(--layout-bg-color);
+    box-shadow: $card-shadow;
   }
 
   .headerLibrary {
