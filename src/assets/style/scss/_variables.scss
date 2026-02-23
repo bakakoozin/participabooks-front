@@ -36,7 +36,7 @@ $font-size: 1.6rem;
 $font-hover: 1.5rem;
 $border-radius: 5px;
 $button-radius: 2px;
-$search-radius: 2px; //used
+$input-radius: 2px; //used
 $card-radius: 1px; //used
 
 $font-lg: $font-size * 1.5;
@@ -73,8 +73,8 @@ $gap-xl: $gap * 4;
   --card-shadow: 0 3px 5px rgba(0, 0, 0, 0.5);
   --button-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
   --form-shadow: inset 1px 1px 7px rgba(0, 0, 0, 0.5);
-  --search-shadow-focus: inset 1px 1px 7px #2b3634; //used
-  --form-shadow-focus: inset 1px 1px 7px #f29966;
+  --search-shadow-focus: inset 1px 1px 3px #2b3634; //used
+  --form-shadow-focus: inset 1px 1px 7px #bdbf73;
   --avatar-shadow: 1px 1px 10px #593f42;
 }
 

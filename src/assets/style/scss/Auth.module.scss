@@ -7,11 +7,11 @@
 
   h2 {
     text-align: center;
-    background-color: var(--brown-color);
-    color: var(--secondary-text-color);
+    background-color: var(--elements-bg-color);
+    color: var(--brown-color);
     padding: 1rem;
-    border-radius: $border-radius;
-    box-shadow: var(--card-shadow);
+    border-radius: $card-radius;
+    border: solid 1px var(--layout-bg-color);
     margin-bottom: 2rem;
   }
 
@@ -19,10 +19,11 @@
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
-    background-color: var(--green-color);
+    background-color: var(--elements-bg-color);
     color: var(--brown-color);
     padding: 1rem 2rem;
-    border-radius: $border-radius;
+    border-radius: $card-radius;
+    border: solid 1px var(--layout-bg-color);
     box-shadow: var(--card-shadow);
 
     article {
@@ -33,8 +34,8 @@
       width: 95%;
       padding: 0.5rem;
       margin: 1rem 0;
-      border-radius: $border-radius;
-      border: none;
+      border-radius: $input-radius;
+      border: 1px solid var(--dark-text-color-active);
       box-shadow: var(--form-shadow);
       font-size: $font-size;
       color: var(--brown-color);
@@ -48,17 +49,12 @@
 
     .btn {
       padding: 1rem 2rem;
-      background-color: var(--button-bg);
+      background-color: var(--btnAdd-bg);
       color: var(--secondary-text-color);
       border: none;
-      border-radius: $border-radius;
+      border-radius: $button-radius;
+      border: 1px solid var(--layout-bg-color);
       box-shadow: var(--button-shadow);
-      cursor: pointer;
-
-      &:hover {
-        background-color: var(--button-hover-bg);
-        color: var(--active-menu-text);
-      }
     }
 
     p {
@@ -70,10 +66,10 @@
     }
 
     strong {
-      color: var(--light-color);
+      color: var(--secondary-text-color);
 
       &:hover {
-        color: var(--button-hover-bg);
+        color: var(--brown-color);
       }
     }
   }
@@ -98,7 +94,7 @@
     .authForm {
       justify-content: center;
       align-items: center;
-      height: 50vh;
+      height: 65vh;
       gap: $gap-xl;
 
       form {
@@ -112,6 +108,17 @@
       input {
         width: 100%;
         height: 4rem;
+      }
+
+      .btn {
+        background-color: transparent;
+        color: var(--dark-text-color);
+        cursor: pointer;
+
+        &:hover {
+          background-color: var(--btnAdd-bg);
+          color: var(--secondary-text-color);
+        }
       }
     }
   }
