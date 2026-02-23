@@ -21,7 +21,7 @@ const ButtonEditVolume = ({ item, ariaLabel }) => {
   return (
     <button
       onClick={handleEditVolume}
-      className={styles.btnEdit}
+      className={styles.btnEditVol}
       aria-label={ariaLabel}
     >
       Éditer

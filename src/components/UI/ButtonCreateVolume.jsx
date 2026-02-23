@@ -31,7 +31,7 @@ const ButtonCreateVolume = ({ item, ariaLabel }) => {
   return (
     <button
       onClick={handleCreateVolume}
-      className={styles.btnEdit}
+      className={styles.btnEditVol}
       aria-label={ariaLabel}
     >
       Ajouter un volume

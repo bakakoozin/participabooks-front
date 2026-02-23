@@ -51,9 +51,9 @@ $gap-xl: $gap * 4;
 // Variables CSS dynamiques
 :root {
   --test-color: #557a55;
-  --btnAdd-bg: rgba(96, 131, 94, 0.6);
+  --btnAdd-bg: rgba(96, 131, 94, 0.6); //used
   --light-color: #bf705e;
-  --orange-color: #f29966; //used
+  --btnEdit-bg: rgba(242, 153, 102, 0.6); //used
   --bg-color: #4b5e5b;
   --layout-bg-color: rgba(75, 94, 91, 0.85); //used
   --elements-bg-color: rgba(75, 94, 91, 0.4); //used
@@ -61,6 +61,7 @@ $gap-xl: $gap * 4;
   --button-bg: #bf705e;
   --brown-color: #593f42; //used
   --red-color: #F24C3D; //used
+  --btnAlert-bg: rgba(242, 76, 61, 0.6); //used
   --dark-text-color: rgba(42, 39, 39, 0.8); //used
   --dark-text-color-footer: rgb(30, 29, 29); //used
   --dark-text-color-active:rgba(42, 39, 39, 0.5); //used

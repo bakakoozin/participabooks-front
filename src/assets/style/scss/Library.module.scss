@@ -109,17 +109,13 @@
 
       .btnEdit {
         padding: 1rem 2rem;
-        background-color: var(--orange-color);
-        color: var(--brown-color);
+        font-family: $button-font-family;
+        background-color: var(--btnEdit-bg);
+        color: var(--secondary-text-color);
         border: none;
-        border-radius: $border-radius;
+        border: 1px solid var(--layout-bg-color);
+        border-radius: $button-radius;
         box-shadow: var(--button-shadow);
-        cursor: pointer;
-
-        &:hover {
-          background-color: var(--button-hover-bg);
-          color: var(--active-menu-text);
-        }
       }
     }
   }
@@ -128,7 +124,6 @@
 @include respond-to(tablet) {
   .mainContainer {
     padding-top: 10vh;
-    padding-bottom: 4vh;
 
     .searchBar {
       input {
@@ -196,14 +191,17 @@
 
       .buttons {
         width: 60%;
-        font-size: 1.4rem;
-
-        .btnAlert {
-          padding: 0.5rem 1rem;
-        }
 
         .btnEdit {
+          cursor: pointer;
+          font-size: 1.4rem;
           padding: 0.5rem 1rem;
+          color: var(--secondary-text-color);
+
+          &:hover {
+            background-color: transparent;
+            color: var(--dark-text-color);
+          }
         }
       }
     }
