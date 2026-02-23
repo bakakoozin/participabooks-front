@@ -43,7 +43,7 @@
       border: 1px solid var(--layout-bg-color);
       font-size: $font-size;
       color: var(--brown-color);
-      background-color: var(--secondary-text-color);
+      background-color: var(--search-bg-color);
 
       &:focus {
         outline: none;
@@ -149,35 +149,24 @@
     border: 1px solid var(--layout-bg-color);
     border-radius: $button-radius;
     box-shadow: var(--button-shadow);
+  }
+
+  .cancelBtn {
+    background-color: var(--btnCancel-bg);
+  }
+
+  .btnAuthor {
+    padding: 1rem;
+    background-color: var(--btnAuthor-bg);
+    color: var(--secondary-text-color);
+    border: 1px solid var(--layout-bg-color);
+    border-radius: $button-radius;
+    box-shadow: $button-shadow;
     cursor: pointer;
 
     &:hover {
       background-color: transparent;
       color: var(--dark-text-color);
-    }
-  }
-
-  .btn.cancelBtn {
-    background-color: var(--brown-color);
-
-    &:hover {
-      background-color: var(--layout-border-color);
-      color: $green-color;
-    }
-  }
-
-  .btnAuthor {
-    padding: 0.5rem;
-    background-color: var(--brown-color);
-    color: var(--secondary-text-color);
-    border: none;
-    border-radius: $border-radius;
-    box-shadow: $button-shadow;
-    cursor: pointer;
-
-    &:hover {
-      background-color: var(--button-hover-bg);
-      color: var(--active-menu-text);
     }
   }
 
@@ -238,6 +227,22 @@
 
     fieldset {
       text-align: center;
+    }
+  }
+
+  .btn {
+    cursor: pointer;
+
+    &:hover {
+      background-color: transparent;
+      color: var(--dark-text-color);
+    }
+  }
+
+  .cancelBtn {
+    &:hover {
+      background-color: transparent;
+      color: var(--dark-text-color);
     }
   }
 }

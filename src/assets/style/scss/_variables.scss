@@ -50,7 +50,9 @@ $gap-xl: $gap * 4;
 
 // Variables CSS dynamiques
 :root {
-  --test-color: #557a55;
+  --test-color: #a79b5a;
+  --btnAuthor-bg: rgba(167, 155, 90, 0.6);
+  --btnCancel-bg: rgba(133, 117, 84, 0.6);
   --btnAdd-bg: rgba(96, 131, 94, 0.6); //used
   --light-color: #bf705e;
   --btnEdit-bg: rgba(242, 153, 102, 0.6); //used
