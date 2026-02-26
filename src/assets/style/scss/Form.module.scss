@@ -162,29 +162,17 @@
     border: 1px solid var(--layout-bg-color);
     border-radius: $button-radius;
     box-shadow: $button-shadow;
-    cursor: pointer;
-
-    &:hover {
-      background-color: transparent;
-      color: var(--dark-text-color);
-    }
   }
 
   .btnClose {
     padding: 0.5rem;
     margin-left: 1rem;
     font-size: 1.5rem;
-    background-color: var(--brown-color);
+    background-color: var(--btnCancel-bg);
     color: var(--secondary-text-color);
-    border: none;
-    border-radius: $border-radius;
+    border: 1px solid var(--layout-bg-color);
+    border-radius: $button-radius;
     box-shadow: $button-shadow;
-    cursor: pointer;
-
-    &:hover {
-      background-color: var(--button-hover-bg);
-      color: var(--active-menu-text);
-    }
   }
 
   .validateContainer {
@@ -240,6 +228,24 @@
   }
 
   .cancelBtn {
+    &:hover {
+      background-color: transparent;
+      color: var(--dark-text-color);
+    }
+  }
+
+  .btnAuthor {
+    cursor: pointer;
+
+    &:hover {
+      background-color: transparent;
+      color: var(--dark-text-color);
+    }
+  }
+
+  .btnClose {
+    cursor: pointer;
+
     &:hover {
       background-color: transparent;
       color: var(--dark-text-color);
