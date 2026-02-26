@@ -2,7 +2,7 @@
 @import "variables";
 
 .mainContainer {
-  padding-top: var(--header-height);
+  padding-top: 8vh;
   transition: background-color 0.3s;
 
   h2 {
@@ -10,6 +10,7 @@
     background-color: var(--elements-bg-color);
     color: var(--brown-color);
     padding: 1rem;
+    border: 1px solid var(--layout-bg-color);
     border-radius: $card-radius;
     box-shadow: var(--card-shadow);
   }
@@ -27,6 +28,7 @@
     padding: 1rem;
     color: var(--brown-color);
     background-color: var(--elements-bg-color);
+    border: 1px solid var(--layout-bg-color);
     border-radius: $card-radius;
     box-shadow: var(--card-shadow);
     margin: 2rem 0;
@@ -89,7 +91,7 @@
 
 @include respond-to(tablet) {
   .mainContainer {
-    padding-top: 9rem;
+    padding-top: 10vh;
     margin: auto;
     width: 80%;
   }
@@ -97,7 +99,8 @@
 
 @include respond-to(desktop) {
   .mainContainer {
-    padding-top: 10rem;
+    padding-top: 9vh;
+    padding-bottom: 8vh;
     margin: auto;
     width: 60%;
 

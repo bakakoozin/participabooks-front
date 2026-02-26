@@ -42,12 +42,12 @@ export function Dashboard() {
 
   return (
     <main className={styles.mainContainer}>
-      <h2>Profil</h2>
+      <h2>mon profil</h2>
       {/* Donnéees personnelles */}
       {infos && (
         <section>
           <article>
-            <h3>Informations personnelles</h3>
+            <h3>informations personnelles</h3>
             <p>
               <strong>Pseudo :</strong> {infos.pseudo}
             </p>
