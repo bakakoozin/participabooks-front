@@ -7,6 +7,8 @@ import { ConfirmModal } from "./ConfirmModal";
 import { API_URL } from "../../utils/constants";
 
 import styles from "../../assets/style/scss/Button.module.scss";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faTrash } from "@fortawesome/free-solid-svg-icons";
 
 const ButtonRemove = ({ item, type, onRemove, ariaLabel }) => {
   const [showModal, setShowModal] = useState(false);
@@ -70,7 +72,7 @@ const ButtonRemove = ({ item, type, onRemove, ariaLabel }) => {
         className={styles.btnAlert}
         aria-label={ariaLabel}
       >
-        Supprimer
+        <FontAwesomeIcon icon={faTrash} />
       </button>
       
       {showModal && (

@@ -80,7 +80,7 @@
 
 .btnDelete {
   padding: 1rem 2rem;
-  background-color: var(--red-color);
+  background-color: var(--btnAlert-bg);
   font-size: $font-size;
   font-weight: $font-weight;
   color: var(--secondary-text-color);
@@ -123,8 +123,8 @@
 
       &:hover {
         background-color: transparent;
-        color: var(--red-color);
-        border: 1px solid var(--red-color);
+        color: var(--btnAlertHover-color);
+        border: 1px solid var(--btnAlertHover-color);
       }
     }
   }

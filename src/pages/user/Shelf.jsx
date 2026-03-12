@@ -27,7 +27,7 @@ export function Shelf() {
   // Fonction pour gérer la suppression d'un ouvrage dans le state local
   const handleRemoveWork = (removedWorkId) => {
     setUpdatedData((prevData) =>
-      prevData.filter((work) => work.works_id !== removedWorkId)
+      prevData.filter((work) => work.works_id !== removedWorkId),
     );
   };
 

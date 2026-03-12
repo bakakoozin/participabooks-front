@@ -2,7 +2,7 @@
 @import "variables";
 
 .mainContainer {
-  padding-top: var(--header-height);
+  padding-top: 8vh;
   transition:
     border-color 0.3s,
     box-shadow 0.3s;
@@ -129,7 +129,7 @@
 
 @include respond-to(tablet) {
   .mainContainer {
-    padding-top: 9rem;
+    padding-top: 10vh;
     margin: auto;
 
     .userTable {
@@ -144,7 +144,7 @@
 
 @include respond-to(desktop) {
   .mainContainer {
-    padding-top: 11rem;
+    padding-top: 9vh;
     width: 60%;
     button {
       cursor: pointer;
@@ -161,8 +161,8 @@
 
         &:hover {
           background-color: transparent;
-          border: 1px solid var(--btnAlert-bg);
-          color: var(--dark-text-color);
+          border: 1px solid var(--btnAlertHover-color);
+          color: var(--btnAlertHover-color);
         }
       }
     }
@@ -172,6 +172,7 @@
 
       &:hover {
         outline: none;
+        background-color: var(--green-color);
         border-color: var(--green-color);
       }
     }

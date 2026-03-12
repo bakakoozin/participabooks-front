@@ -2,7 +2,7 @@
 @import "variables";
 
 .mainContainer {
-  padding-top: var(--header-height);
+  padding-top: 8vh;
   transition: background-color 0.2s;
 
   h2 {
@@ -63,7 +63,7 @@
     }
 
     .authAlert {
-      color: var(--red-color);
+      color: var(--btnAlertHover-color);
     }
 
     strong {
@@ -78,7 +78,7 @@
 
 @include respond-to(tablet) {
   .mainContainer {
-    padding-top: 9rem;
+    padding-top: 11vh;
     margin: auto;
     width: 60%;
   }
@@ -86,7 +86,7 @@
 
 @include respond-to(desktop) {
   .mainContainer {
-    padding-top: 11rem;
+    padding-top: 9vh;
     margin: auto;
     display: flex;
     flex-direction: column;

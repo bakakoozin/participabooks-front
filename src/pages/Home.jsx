@@ -13,6 +13,8 @@ import { Pagination } from "../components/Pagination";
 import { Img } from "../components/Img";
 
 import styles from "../assets/style/scss/Library.module.scss";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faPenToSquare } from "@fortawesome/free-solid-svg-icons";
 
 export function Home() {
   const { infos } = useSelector((state) => state.auth);
@@ -112,7 +114,7 @@ export function Home() {
                           className={styles.btnEdit}
                           aria-label={`Éditer l’ouvrage ${work.works_name}`}
                         >
-                          Editer
+                          <FontAwesomeIcon icon={faPenToSquare} />
                         </Link>
                       )}
                     <ButtonRemove
