@@ -36,6 +36,7 @@ $gap-xl: $gap * 4; //used
   --hover-pagination-color: rgba(92, 95, 95, 0.1); //used
   --brown-color: #593f42; //used
   --btnAlert-bg: rgba(242, 76, 61, 0.6); //used
+  --disconnectHover-color: rgba(223, 43, 26, 0.6); //used
   --disconnect-color: rgba(242, 76, 61, 0.8);
   --btnAlertHover-color: rgba(117, 37, 30, 0.925); //used
   --dark-text-color: rgba(42, 39, 39, 0.8); //used
@@ -53,17 +54,38 @@ $gap-xl: $gap * 4; //used
 }
 
 [data-theme="sombre"] {
-  --orange-color: #c76d3c;
-  --bg-color: #2c2c2c;
-  --green-color: #6d6f3e;
-  --brown-color: #1e1e1e;
-  --dark-text-color: #e0e0e0;
-  --secondary-text-color: #a6a6a6;
-  --layout-border-color: #4a4b2b;
-  --card-shadow: 0 3px 5px rgba(0, 0, 0, 0.8);
-  --button-shadow: 1px 1px 3px rgba(44, 38, 38, 0.2);
-  --form-shadow: inset 1px 1px 7px rgba(255, 255, 255, 0.2);
-  --search-shadow: inset 1px 1px 7px #6d6f3e;
-  --form-shadow-focus: inset 1px 1px 7px #d87c4a;
-  --avatar-shadow: 1px 1px 10px #1e1e1e;
+  // Variables de couleurs de fond
+  --bg-color: #1a1f1e;
+  --layout-bg-color: rgba(26, 31, 30, 0.95);
+  --elements-bg-color: rgba(45, 55, 52, 0.6);
+  
+  // Variables de couleurs de texte
+  --brown-color: #e8ddd5;
+  --dark-text-color: rgba(232, 221, 213, 0.9);
+  --dark-text-color-footer: rgb(200, 190, 180);
+  --dark-text-color-active: rgba(232, 221, 213, 0.6);
+  --secondary-text-color: #b8c4c1;
+  
+  // Variables de boutons
+  --btnAuthor-bg: rgba(189, 171, 102, 0.7);
+  --btnCancel-bg: rgba(150, 130, 95, 0.7);
+  --btnAdd-bg: rgba(108, 148, 106, 0.7);
+  --btnEdit-bg: rgba(255, 165, 115, 0.7);
+  --btnAlert-bg: rgba(255, 100, 85, 0.7);
+  --disconnect-color: rgba(255, 100, 85, 0.7);
+  --btnAlertHover-color: rgba(200, 65, 50, 0.9);
+  --disconnectHover-color: rgba(255, 100, 85, 0.85);
+  
+  // Variables d'interface
+  --search-bg-color: rgba(60, 75, 72, 0.8);
+  --hover-pagination-color: rgba(80, 90, 87, 0.3);
+  --layout-border-color: #3a4542;
+  
+  // Variables d'ombres
+  --card-shadow: 0 4px 8px rgba(0, 0, 0, 0.6);
+  --button-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+  --form-shadow: inset 1px 1px 8px rgba(0, 0, 0, 0.4);
+  --search-shadow-focus: inset 1px 1px 4px #3a4542;
+  --form-shadow-focus: inset 1px 1px 8px rgba(189, 171, 102, 0.3);
+  --avatar-shadow: 2px 2px 12px rgba(0, 0, 0, 0.6);
 }
