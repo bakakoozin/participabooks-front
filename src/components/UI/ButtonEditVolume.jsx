@@ -4,6 +4,8 @@ import PropTypes from "prop-types";
 import { useCanEditVolume } from "../../hooks/useCanEditVolume";
 
 import styles from "../../assets/style/scss/Button.module.scss";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faPenToSquare } from "@fortawesome/free-solid-svg-icons";
 
 const ButtonEditVolume = ({ item, ariaLabel }) => {
   const navigate = useNavigate();
@@ -21,10 +23,10 @@ const ButtonEditVolume = ({ item, ariaLabel }) => {
   return (
     <button
       onClick={handleEditVolume}
-      className={styles.btnEdit}
+      className={styles.btnEditVol}
       aria-label={ariaLabel}
     >
-      Éditer
+      <FontAwesomeIcon icon={faPenToSquare} />
     </button>
   );
 };

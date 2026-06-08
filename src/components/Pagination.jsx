@@ -51,7 +51,7 @@ export function Pagination({ totalPages }) {
         <li className={styles.pageItem}>
           <button
             className={styles.pageLink}
-            disabled={page <= 0} // Désactive le bouton si on est sur la première page
+            disabled={page <= 1} // Désactive le bouton si on est sur la première page
             onClick={() => handlePageChange(page - 1)}
           >
             <FontAwesomeIcon icon={faAngleLeft} />

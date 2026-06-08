@@ -6,6 +6,8 @@ import { ConfirmModal } from "./ConfirmModal";
 import { API_URL } from "../../utils/constants";
 
 import styles from "../../assets/style/scss/Button.module.scss";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faTrash } from "@fortawesome/free-solid-svg-icons";
 
 const ButtonRemoveFromShelf = ({ item, type, onRemove, ariaLabel }) => {
   const [showModal, setShowModal] = useState(false);
@@ -50,10 +52,10 @@ const ButtonRemoveFromShelf = ({ item, type, onRemove, ariaLabel }) => {
     <>
       <button
         onClick={() => setShowModal(true)}
-        className={styles.btnAlert}
+        className={styles.btnRemove}
         aria-label={ariaLabel}
       >
-        Supprimer de ma bibliothèque
+        <FontAwesomeIcon icon={faTrash} />
       </button>
       {showModal && (
         <ConfirmModal

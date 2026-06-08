@@ -27,7 +27,7 @@ export function Shelf() {
   // Fonction pour gérer la suppression d'un ouvrage dans le state local
   const handleRemoveWork = (removedWorkId) => {
     setUpdatedData((prevData) =>
-      prevData.filter((work) => work.works_id !== removedWorkId)
+      prevData.filter((work) => work.works_id !== removedWorkId),
     );
   };
 
@@ -63,8 +63,8 @@ export function Shelf() {
       </header>
       <Pagination totalPages={data.totalPages} />
 
-      <section className={styles.sliderContainer}>
-        <article className={styles.slider} ref={sliderRef}>
+      <section className={styles.workContainer}>
+        <article className={styles.work} ref={sliderRef}>
           {updatedData?.map((work) => (
             <section key={work.works_id} className={styles.workCard}>
               <header>
@@ -84,10 +84,10 @@ export function Shelf() {
               </figure>
               <footer className={styles.workFooter}>
                 <aside className={styles.authorsList}>
+                  <p>{work.works_edition}</p>
                   <AuthorsList workAuthors={work.authors_name} />
                 </aside>
                 <aside className={styles.buttons}>
-                  <p>{work.works_edition}</p>
                   <ButtonRemoveFromShelf
                     item={work}
                     type="work"

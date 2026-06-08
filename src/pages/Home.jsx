@@ -1,9 +1,8 @@
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useState } from "react";
 import { useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 
 import { useMetaDescription } from "../hooks/useMetaDescription";
-import { scrollSlider } from "../utils/slider";
 import { useFetch } from "../hooks/useFetch";
 import { useTitle } from "../hooks/useTitle";
 
@@ -13,12 +12,9 @@ import { AuthorsList } from "../components/AuthorsList";
 import { Pagination } from "../components/Pagination";
 import { Img } from "../components/Img";
 
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import styles from "../assets/style/scss/Library.module.scss";
-import {
-  faChevronLeft,
-  faChevronRight,
-} from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faPenToSquare } from "@fortawesome/free-solid-svg-icons";
 
 export function Home() {
   const { infos } = useSelector((state) => state.auth);
@@ -26,13 +22,12 @@ export function Home() {
     initData: { datas: [], totalPages: 0 },
   });
   const [updatedData, setUpdatedData] = useState(data?.datas || []);
-  const sliderRef = useRef(null);
   const handleRemoveWork = (removedWorkId) => {
     setUpdatedData((prevData) =>
-      prevData.filter((work) => work.works_id !== removedWorkId)
+      prevData.filter((work) => work.works_id !== removedWorkId),
     );
   };
-  console.log(search)
+  console.log(search);
 
   // Fonction pour vérifier si l'utilisateur peut voir un ouvrage
   const canSeeWork = (work) => {
@@ -43,13 +38,13 @@ export function Home() {
     if (!work.volumes || work.volumes.length === 0) return false;
 
     const hasValidVolume = work.volumes.some(
-      (volume) => volume.vol_status === "validé"
+      (volume) => volume.vol_status === "validé",
     );
     if (hasValidVolume) return true;
 
     if (!isLogged) return false;
     return work.volumes.some(
-      (volume) => volume.user_id === infos.id || isAdmin || isMod
+      (volume) => volume.user_id === infos.id || isAdmin || isMod,
     );
   };
 
@@ -62,15 +57,8 @@ export function Home() {
 
   return (
     <main className={styles.mainContainer}>
-      <h1>Bibliothèque</h1>
+      {/* <h1>Bibliothèque</h1> */}
       <header className={styles.headerLibrary}>
-        <button
-          className={`${styles.navButton} ${styles.left}`}
-          onClick={() => scrollSlider(sliderRef, "left")}
-          aria-label="Faire défiler vers la gauche"
-        >
-          <FontAwesomeIcon icon={faChevronLeft} />
-        </button>
         <form className={styles.searchBar}>
           <input
             type="text"
@@ -79,18 +67,11 @@ export function Home() {
             onChange={(e) => setSearch(e.target.value)}
           />
         </form>
-        <button
-          className={`${styles.navButton} ${styles.right}`}
-          onClick={() => scrollSlider(sliderRef, "right")}
-          aria-label="Faire défiler vers la droite"
-        >
-          <FontAwesomeIcon icon={faChevronRight} />
-        </button>
       </header>
       <Pagination totalPages={data.totalPages} />
 
-      <section className={styles.sliderContainer}>
-        <article className={styles.slider} ref={sliderRef}>
+      <section className={styles.workContainer}>
+        <article className={styles.work}>
           {updatedData?.map((work) => {
             if (!canSeeWork(work)) return null;
 
@@ -105,18 +86,20 @@ export function Home() {
                 </header>
                 <figure>
                   <Link to={`/works/${work.works_id}`}>
-                    <Img 
-                      src={work.cover_url} 
-                      alt={`image de couverture de ${work.works_name}`} 
+                    <Img
+                      src={work.cover_url}
+                      alt={`image de couverture de ${work.works_name}`}
                     />
                   </Link>
                 </figure>
                 <footer className={styles.workFooter}>
                   <aside className={styles.authorsList}>
+                    <p className={styles.editions}>
+                      Editions {work.works_edition}
+                    </p>
                     <AuthorsList workAuthors={work.authors_name} />
                   </aside>
                   <aside className={styles.buttons}>
-                    <p>Editions {work.works_edition}</p>
                     <ButtonAddToShelf
                       item={work}
                       type="work"
@@ -131,7 +114,7 @@ export function Home() {
                           className={styles.btnEdit}
                           aria-label={`Éditer l’ouvrage ${work.works_name}`}
                         >
-                          Editer
+                          <FontAwesomeIcon icon={faPenToSquare} />
                         </Link>
                       )}
                     <ButtonRemove
@@ -153,6 +136,9 @@ export function Home() {
           )}
         </div>
       </section>
+      <div className={styles.paginationBottom}>
+        <Pagination totalPages={data.totalPages} />
+      </div>
     </main>
   );
 }

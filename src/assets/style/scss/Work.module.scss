@@ -2,18 +2,19 @@
 @import "variables";
 
 .mainContainer {
-  padding-top: var(--header-height);
-  padding-bottom: var(--footer-height);
+  padding-top: 8vh;
+  padding-bottom: 5vh;
 
   h2 {
     text-align: center;
   }
 
   .workInfos {
-    background-color: var(--green-color);
+    background-color: var(--elements-bg-color);
     color: var(--brown-color);
     padding: 1rem 2rem;
-    border-radius: $border-radius;
+    border-radius: $card-radius;
+    border: solid 1px var(--layout-bg-color);
     box-shadow: var(--card-shadow);
 
     .workArticle {
@@ -21,7 +22,7 @@
       flex-direction: row;
       justify-content: space-between;
       align-items: center;
-      padding: 1rem 0;
+      padding-right: 3rem;
 
       p {
         padding-top: 1rem;
@@ -51,7 +52,7 @@
       flex-direction: row;
       justify-content: start;
       align-items: center;
-      accent-color: var(--light-color);
+      accent-color: var(--btnAlertHover-color);
       gap: $gap-lg;
       margin-top: 1rem;
 
@@ -73,8 +74,9 @@
     flex-direction: column;
     justify-content: center;
     padding: 1rem;
-    background-color: var(--green-color);
-    border-radius: 8px;
+    background-color: var(--elements-bg-color);
+    border-radius: $card-radius;
+    border: 1px solid var(--elements-bg-color);
     box-shadow: var(--card-shadow);
     margin-bottom: 2rem;
 
@@ -120,8 +122,7 @@
 
 @include respond-to(tablet) {
   .mainContainer {
-    padding-top: 9rem;
-    padding-bottom: 2rem;
+    padding-top: 10vh;
 
     .cardContainer {
       display: grid;
@@ -129,14 +130,22 @@
       gap: $gap-lg;
       justify-items: center;
     }
+
+    .workInfos {
+      .workArticle {
+        padding-right: 1rem;
+      }
+    }
   }
 }
 
 @include respond-to(desktop) {
   .mainContainer {
-    padding-top: 11rem;
-    padding-bottom: 3rem;
-
+    .workInfos {
+      .workArticle {
+        padding-right: 0;
+      }
+    }
     .cardContainer {
       grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
 
@@ -150,7 +159,7 @@
     .btnContainer {
       flex-direction: row;
       justify-content: space-between;
-      max-width:in;
+      max-width: 100%;
     }
   }
 }

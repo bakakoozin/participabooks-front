@@ -2,16 +2,18 @@
 @import "variables";
 
 .mainContainer {
-  padding-top: var(--header-height);
+  padding-top: 8vh;
+  padding-bottom: 5vh;
   transition: background-color 0.3s;
 
   h2,
   h3 {
     text-align: center;
-    background-color: var(--brown-color);
-    color: var(--secondary-text-color);
+    background-color: var(--elements-bg-color);
+    color: var(--brown-color);
     padding: 1rem;
-    border-radius: $border-radius;
+    border-radius: $card-radius;
+    border: 1px solid var(--layout-bg-color);
     box-shadow: $card-shadow;
     margin-bottom: 2rem;
   }
@@ -22,9 +24,9 @@
     flex-wrap: wrap;
     overflow: hidden;
     padding: 1rem 2rem;
-    background-color: var(--green-color);
-    border-radius: 8px;
-    border-radius: $border-radius;
+    background-color: var(--elements-bg-color);
+    border: 1px solid var(--layout-bg-color);
+    border-radius: $card-radius;
     box-shadow: $card-shadow;
     margin-bottom: 2rem;
 
@@ -37,12 +39,11 @@
       width: 95%;
       padding: 0.6rem;
       margin: 1rem 0;
-      border-radius: $border-radius;
-      border: none;
-      box-shadow: var(--form-shadow);
+      border-radius: $input-radius;
+      border: 1px solid var(--layout-bg-color);
       font-size: $font-size;
       color: var(--brown-color);
-      background-color: var(--secondary-text-color);
+      background-color: var(--search-bg-color);
 
       &:focus {
         outline: none;
@@ -56,9 +57,8 @@
       padding: 0.6rem;
       margin: 1rem 0;
       text-align: justify;
-      border-radius: $border-radius;
-      border: none;
-      box-shadow: var(--form-shadow);
+      border-radius: $input-radius;
+      border: 1px solid var(--layout-bg-color);
       font-size: $font-size;
       color: var(--brown-color);
       background-color: var(--secondary-text-color);
@@ -70,7 +70,7 @@
     }
 
     fieldset {
-      border: 2px solid var(--light-color);
+      border: 2px solid var(--btnAlertHover-color);
       border-radius: 5px;
       padding: 1rem;
       margin-bottom: 1rem;
@@ -87,7 +87,7 @@
     .radio {
       width: 2rem;
       box-shadow: none;
-      accent-color: var(--red-color);
+      accent-color: var(--btnAlertHover-color);
       padding: 1rem;
 
       &:focus {
@@ -98,7 +98,7 @@
     .checkbox {
       width: 2rem;
       box-shadow: none;
-      accent-color: var(--red-color);
+      accent-color: var(--btnAlertHover-color);
       padding: 1rem 0;
 
       &:focus {
@@ -144,58 +144,35 @@
 
   .btn {
     padding: 1rem 2rem;
-    background-color: var(--button-bg);
+    background-color: var(--btnAdd-bg);
     color: var(--secondary-text-color);
-    border: none;
-    border-radius: $border-radius;
-    box-shadow: $button-shadow;
-    cursor: pointer;
-    
-    &:hover {
-      background-color: var(--button-hover-bg);
-      color: var(--active-menu-text);
-    }
+    border: 1px solid var(--layout-bg-color);
+    border-radius: $button-radius;
+    box-shadow: var(--button-shadow);
   }
 
-  .btn.cancelBtn {
-    background-color: var(--brown-color);
-
-    &:hover {
-      background-color: var(--layout-border-color);
-      color: $green-color;
-    }
+  .cancelBtn {
+    background-color: var(--btnCancel-bg);
   }
 
   .btnAuthor {
-    padding: 0.5rem;
-    background-color: var(--brown-color);
+    padding: 1rem;
+    background-color: var(--btnAuthor-bg);
     color: var(--secondary-text-color);
-    border: none;
-    border-radius: $border-radius;
+    border: 1px solid var(--layout-bg-color);
+    border-radius: $button-radius;
     box-shadow: $button-shadow;
-    cursor: pointer;
-
-    &:hover {
-      background-color: var(--button-hover-bg);
-      color: var(--active-menu-text);
-    }
   }
 
   .btnClose {
     padding: 0.5rem;
     margin-left: 1rem;
     font-size: 1.5rem;
-    background-color: var(--brown-color);
+    background-color: var(--btnCancel-bg);
     color: var(--secondary-text-color);
-    border: none;
-    border-radius: $border-radius;
+    border: 1px solid var(--layout-bg-color);
+    border-radius: $button-radius;
     box-shadow: $button-shadow;
-    cursor: pointer;
-
-    &:hover {
-      background-color: var(--button-hover-bg);
-      color: var(--active-menu-text);
-    }
   }
 
   .validateContainer {
@@ -205,17 +182,16 @@
     gap: 1rem;
   }
 
-.loading,
-.message {
-  margin-top: 30rem;
-}
-
+  .loading,
+  .message {
+    margin-top: 30rem;
+  }
 }
 
 @include respond-to(tablet) {
   .mainContainer {
-    padding-top: 9rem;
-    padding-bottom: 2rem;
+    padding-top: 10vh;
+    padding-bottom: 5vh;
     margin: auto;
     width: 80%;
   }
@@ -223,7 +199,7 @@
 
 @include respond-to(desktop) {
   .mainContainer {
-    padding-top: 10rem;
+    padding-top: 9vh;
     width: 50%;
   }
 
@@ -242,4 +218,37 @@
     }
   }
 
+  .btn {
+    cursor: pointer;
+
+    &:hover {
+      background-color: transparent;
+      color: var(--dark-text-color);
+    }
+  }
+
+  .cancelBtn {
+    &:hover {
+      background-color: transparent;
+      color: var(--dark-text-color);
+    }
+  }
+
+  .btnAuthor {
+    cursor: pointer;
+
+    &:hover {
+      background-color: transparent;
+      color: var(--dark-text-color);
+    }
+  }
+
+  .btnClose {
+    cursor: pointer;
+
+    &:hover {
+      background-color: transparent;
+      color: var(--dark-text-color);
+    }
+  }
 }

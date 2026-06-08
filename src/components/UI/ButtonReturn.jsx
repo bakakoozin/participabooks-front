@@ -8,7 +8,7 @@ const ButtonReturn = () => {
   return (
     <button
       type="button"
-      className={`${styles.btn} ${styles.returnBtn}`}
+      className={styles.returnBtn}
       onClick={() => Navigate(-1)}
       aria-label="Retour à la page précédente"
     >

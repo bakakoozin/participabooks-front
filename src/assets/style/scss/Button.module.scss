@@ -1,53 +1,52 @@
 @import "mixins";
 @import "variables";
 
-.btn {
-  padding: 1rem 2rem;
-  background-color: var(--button-bg);
-  color: var(--secondary-text-color);
+.btnAdd {
   border: none;
-  border-radius: $border-radius;
+  padding: 1rem 2rem;
+  font-size: $font-sm;
+  background-color: var(--btnAdd-bg);
+  color: var(--secondary-text-color);
+  border: 1px solid var(--layout-bg-color);
+  border-radius: $button-radius;
   box-shadow: var(--button-shadow);
-  cursor: pointer;
   transition: background-color 0.3s;
-
-  &:hover {
-    background-color: var(--button-hover-bg);
-    color: var(--active-menu-text);
-  }
 }
 
 .btnAlert {
   padding: 1rem 2rem;
-  background-color: var(--red-color);
+  background-color: var(--btnAlert-bg);
   color: var(--secondary-text-color);
   border: none;
-  border-radius: $border-radius;
+  border: 1px solid var(--layout-bg-color);
+  border-radius: $button-radius;
   box-shadow: var(--button-shadow);
-  cursor: pointer;
   transition: background-color 0.3s;
-
-  &:hover {
-    background-color: var(--button-hover-bg);
-    color: var(--active-menu-text);
-  }
 }
 
-.btnEdit {
+.btnRemove {
+  display: block;
+  margin-left: auto;
   padding: 1rem 2rem;
-  background-color: var(--orange-color);
-  font-family: $button-font-family;
-  color: var(--brown-color);
+  background-color: var(--btnAlert-bg);
+  color: var(--secondary-text-color);
   border: none;
-  border-radius: $border-radius;
+  border: 1px solid var(--layout-bg-color);
+  border-radius: $button-radius;
   box-shadow: var(--button-shadow);
-  cursor: pointer;
   transition: background-color 0.3s;
+}
 
-  &:hover {
-    background-color: var(--button-hover-bg);
-    color: var(--active-menu-text);
-  }
+.btnEditVol {
+  padding: 1rem 2rem;
+  background-color: var(--btnEdit-bg);
+  font-family: $button-font-family;
+  color: var(--secondary-text-color);
+  border: none;
+  border-radius: $button-radius;
+  border: 1px solid var(--layout-bg-color);
+  box-shadow: var(--button-shadow);
+  transition: background-color 0.3s;
 }
 
 .btnContainer {
@@ -55,42 +54,25 @@
   justify-content: flex-end;
 
   .btnReadMore {
-    text-align: right;
-    padding: 0.5rem 2rem;
+    padding: 0.5rem 1rem;
     margin-top: 1rem;
-    background-color: var(--brown-color);
+    background-color: transparent;
     color: var(--secondary-text-color);
-    border: none;
-    border-radius: $border-radius;
-    box-shadow: var(--button-shadow);
-    cursor: pointer;
-    transition: background-color 0.3s;
-
-    &:hover {
-      background-color: var(--button-hover-bg);
-      color: var(--active-menu-text);
-    }
+    border: 1px solid transparent;
+    transition: color 0.3s;
   }
 }
 
 //BOUTON RETOUR
 
 .returnBtn {
-  padding: 1rem 2rem;
-  background-color: var(--light-color);
+  width: 6vw;
+  height: 4vh;
+  padding: 0.5rem 1rem;
+  background-color: transparent;
   color: var(--secondary-text-color);
-  height: 4rem;
-  border: none;
-  border-radius: $border-radius;
-  box-shadow: var(--button-shadow);
-  cursor: pointer;
-  transition: background-color 0.3s;
-  &:focus,
-  &:active {
-    outline: none;
-    background-color: var(--light-color); // même que le fond normal
-    color: var(--secondary-text-color);   // idem
-  }
+  border: 1px solid transparent;
+  transition: color 0.3s;
 }
 
 // MODALE SUPPRESSION
@@ -111,8 +93,8 @@
 .modal {
   background-color: var(--secondary-text-color);
   padding: 2rem;
-  border-radius: $border-radius;
-  border: 2px solid var(--orange-color);
+  border-radius: $card-radius;
+  border: 1px solid var(--layout-border-color);
   box-shadow: var(--card-shadow);
   text-align: center;
   max-width: 90vw;
@@ -127,16 +109,11 @@
 
 .btnCancel {
   padding: 0.8rem 2rem;
-  background-color: var(--brown-color);
+  background-color: var(--btnCancel-bg);
   color: var(--secondary-text-color);
-  border: none;
-  border-radius: $card-radius;
-  cursor: pointer;
-
-  &:hover {
-    background-color: var(--layout-border-color);
-    color: $green-color;
-  }
+  border: 1px solid var(--layout-bg-color);
+  border-radius: $button-radius;
+  box-shadow: var(--button-shadow);
 }
 
 // THEME TOGGLE
@@ -183,8 +160,98 @@
 @include respond-to(desktop) {
   .btn,
   .btnAlert,
+  .btnTrash,
   .btnEdit {
     font-size: 1.3rem;
     padding: 0.5rem 1rem;
+  }
+}
+
+//MODE DESKTOP @media (min-width: 1024px)
+
+@include respond-to(desktop) {
+  .returnBtn {
+    font-size: 1.4rem;
+    cursor: pointer;
+    &:hover {
+      font-size: 1.5rem;
+      border-left: 1px solid var(--dark-text-color);
+      border-right: 1px solid var(--dark-text-color);
+      color: var(--dark-text-color);
+    }
+  }
+
+  .btnAdd {
+    cursor: pointer;
+    font-size: 1.4rem;
+    color: var(--secondary-text-color);
+    transition:
+      opacity 0.3s,
+      background-color 0.3s;
+
+    &:hover {
+      background-color: transparent;
+      color: var(--dark-text-color);
+    }
+  }
+
+  .btnAlert {
+    cursor: pointer;
+    font-size: 1.4rem;
+    color: var(--secondary-text-color);
+    border: 1px solid var(--layout-bg-color);
+
+    &:hover {
+      background-color: transparent;
+      color: var(--btnAlertHover-color);
+      border: 1px solid var(--btnAlertHover-color);
+    }
+  }
+
+  .btnRemove {
+    cursor: pointer;
+    font-size: 1.4rem;
+    color: var(--secondary-text-color);
+    border: 1px solid var(--layout-bg-color);
+
+    &:hover {
+      background-color: transparent;
+      color: var(--btnAlertHover-color);
+      border: 1px solid var(--btnAlertHover-color);
+    }
+  }
+
+  .btnContainer {
+    .btnReadMore {
+      cursor: pointer;
+      width: 8vw;
+      height: 4vh;
+      font-size: 1.4rem;
+
+      &:hover {
+        font-size: 1.5rem;
+        border-left: 1px solid var(--dark-text-color);
+        border-right: 1px solid var(--dark-text-color);
+        color: var(--dark-text-color);
+      }
+    }
+  }
+
+  .btnEditVol {
+    cursor: pointer;
+    color: var(--secondary-text-color);
+    &:hover {
+      background-color: transparent;
+      color: var(--dark-text-color);
+    }
+  }
+
+  .btnCancel {
+    cursor: pointer;
+
+    &:hover {
+      background-color: transparent;
+      color: var(--dark-text-color);
+    }
   }
 }

@@ -58,41 +58,41 @@ export function Login() {
     <main id="login" className={styles.mainContainer}>
       <h2>Se connecter</h2>
       <section className={styles.authForm}>
-          <form onSubmit={handleSubmit}>
-            <label htmlFor="email">Adresse email</label>
-            <input
-              type="email"
-              id="email"
-              ref={emailRef}
-              placeholder="Veuillez saisir votre email"
-              required
-              aria-required="true"
-              autoComplete="email"
-            />
-            <label htmlFor="password">Mot de passe</label>
-            <input
-              type="password"
-              id="password"
-              ref={passwordRef}
-              placeholder="Veuillez saisir votre mot de passe"
-              required
-              aria-required="true"
-              autoComplete="current-password"
-            />
+        <form onSubmit={handleSubmit}>
+          <label htmlFor="email">Adresse email</label>
+          <input
+            type="email"
+            id="email"
+            ref={emailRef}
+            placeholder="Veuillez saisir votre email"
+            required
+            aria-required="true"
+            autoComplete="email"
+          />
+          <label htmlFor="password">Mot de passe</label>
+          <input
+            type="password"
+            id="password"
+            ref={passwordRef}
+            placeholder="Veuillez saisir votre mot de passe"
+            required
+            aria-required="true"
+            autoComplete="current-password"
+          />
 
-            {message && <p className="auth-alert">{message}</p>}
+          {message && <p className="auth-alert">{message}</p>}
 
-            <button className={styles.btn} type="submit">
-              Se connecter
-            </button>
-          </form>
+          <button className={styles.btn} type="submit">
+            Se connecter
+          </button>
+        </form>
 
-          <p>
-            Pas encore inscrit ?{" "}
-            <strong>
-              <Link to={"/auth/register"}>Créer un compte</Link>
-            </strong>
-          </p>
+        <p>
+          Pas encore inscrit ?{" "}
+          <strong>
+            <Link to={"/auth/register"}>Créer un compte</Link>
+          </strong>
+        </p>
       </section>
     </main>
   );

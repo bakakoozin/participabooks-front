@@ -27,7 +27,7 @@ export function Legal() {
 
         <article>
           <h3>Hébergement</h3>
-          <p>Hébergeur : IDE de la 3WAccademy</p>
+          <p>Hébergeur : IONOS</p>
         </article>
 
         <article>
