@@ -26,6 +26,7 @@ $gap-xl: $gap * 4; //used
 
 // Variables CSS dynamiques
 :root {
+  --page-bg-overlay: rgba(0, 0, 0, 0);
   --btnAuthor-bg: rgba(167, 155, 90, 0.6); //used
   --btnCancel-bg: rgba(133, 117, 84, 0.6); //used
   --btnAdd-bg: rgba(96, 131, 94, 0.6); //used
@@ -55,6 +56,7 @@ $gap-xl: $gap * 4; //used
 
 [data-theme="sombre"] {
   // Variables de couleurs de fond
+  --page-bg-overlay: rgba(0, 0, 0, 0.38);
   --bg-color: #1a1f1e;
   --layout-bg-color: rgba(26, 31, 30, 0.95);
   --elements-bg-color: rgba(45, 55, 52, 0.6);
