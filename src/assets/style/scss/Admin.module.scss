@@ -48,7 +48,7 @@
     button {
       padding: 0.5rem 1rem;
       background-color: var(--btnAuthor-bg);
-      color: var(--secondary-text-color);
+      color: var(--layout-bg-color);
       border: 1px solid var(--layout-bg-color);
       border-radius: $button-radius;
       box-shadow: var(--button-shadow);
@@ -151,7 +151,7 @@
 
       &:hover {
         background-color: transparent;
-        color: var(--dark-text-color);
+        color: var(--layout-bg-color);
       }
     }
 
