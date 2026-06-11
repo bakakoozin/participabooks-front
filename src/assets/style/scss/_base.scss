@@ -17,7 +17,7 @@ body {
   font-family: $font-family;
   background-image:
     linear-gradient(var(--page-bg-overlay), var(--page-bg-overlay)),
-    url("/pbooks-bg.png");
+    url("/style/scss/pbooks-bg.png");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
